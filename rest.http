@@ -1,0 +1,30 @@
+get http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTQ5NzkzODQsImV4cCI6MTYxNDk3OTQ0NCwiYXVkIjoiNjA0MjdmYWI2MWFmMmEyYzJjYjQzZThhIiwiaXNzIjoiZ29vZ2xlLmNvbSJ9.aLRYzXYqvadcA9g-ASiECyDPa0F5bqM4WbueRyNV3Xo
+
+###Login Route
+post http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email":"teSt10@mail.com",
+    "password":"12345"
+}
+
+###Register Route
+post http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email":"teSt11@mail.com",
+    "password":"12345"
+}
+
+###Refresh-token Route
+post http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTQ5NzkzNTYsImV4cCI6MTY0NjUzNjk1NiwiYXVkIjoiNjA0MjdmYWI2MWFmMmEyYzJjYjQzZThhIiwiaXNzIjoiZ29vZ2xlLmNvbSJ9.m7uzOU4xVgB4COoQzaIGN0C9DGPnNF-548kPd39fv8M"
+}
+###Logout Route
+delete http://localhost:3000/auth/logout
